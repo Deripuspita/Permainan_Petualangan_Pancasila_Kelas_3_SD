@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Petualangan Pancasila — Kelas 3 SD</title>
+<style>
+:root{--navy:#173b68;--blue:#2477d4;--yellow:#ffd34e;--cream:#fffaf0;--green:#218653;--red:#c64242;--ink:#213047}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(135deg,#e6f4ff,#fff5d9);color:var(--ink);min-height:100vh}
+header{background:var(--navy);color:white;padding:18px 16px;text-align:center;box-shadow:0 4px 0 #102b4d}header h1{margin:0;font-size:clamp(1.35rem,4vw,2rem)}header p{margin:5px 0 0}
+.wrap{max-width:900px;margin:22px auto;padding:0 14px 32px}.panel{background:white;border:3px solid #dceafa;border-radius:22px;padding:clamp(16px,4vw,28px);box-shadow:0 10px 25px #173b6814;margin-bottom:16px}
+.hero{text-align:center;background:linear-gradient(135deg,#fff,#fff8d8)}.mascot{font-size:clamp(3.5rem,10vw,6rem);line-height:1.15}.hero h2{color:var(--navy);margin:8px 0}.hero p{line-height:1.6}.pill{display:inline-block;background:#e8f3ff;color:#174f8b;border-radius:30px;padding:6px 12px;font-weight:700;font-size:.9rem}
+label{display:block;font-weight:750;margin:12px 0 6px}input{width:100%;padding:13px 14px;border:2px solid #c9d9ec;border-radius:12px;font:inherit}
+button{border:0;border-radius:13px;padding:13px 18px;font:inherit;font-weight:800;cursor:pointer;transition:transform .15s,filter .15s}button:hover{filter:brightness(.97);transform:translateY(-1px)}button:focus-visible,input:focus-visible{outline:3px solid #ffbd32;outline-offset:2px}.primary{background:var(--blue);color:white}.gold{background:var(--yellow);color:#473500}.secondary{background:#eaf2fb;color:var(--navy)}.btnrow{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.btnrow button{flex:1}
+.hidden{display:none!important}.topline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.progress{height:12px;background:#e7edf5;border-radius:30px;overflow:hidden;margin:14px 0}.bar{height:100%;width:0;background:linear-gradient(90deg,#27a36b,#8bdc79);transition:width .35s}
+.levels{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0}.level{padding:7px 10px;border-radius:30px;background:#edf1f7;color:#607087;font-weight:750;font-size:.83rem}.level.active{background:#fff0b5;color:#755300}.level.done{background:#dff7e9;color:#12663d}
+.question{font-size:clamp(1.1rem,3vw,1.45rem);font-weight:800;line-height:1.45;margin:18px 0}.scenario{background:#f2f8ff;border-left:5px solid #4b91df;border-radius:12px;padding:14px;line-height:1.55}.choices{display:grid;gap:10px;margin-top:16px}.choice{background:#f8fbff;border:2px solid #dce7f3;text-align:left;color:var(--ink);font-weight:650}.choice .letter{display:inline-grid;place-items:center;width:30px;height:30px;background:#e3efff;color:#1f5e9e;border-radius:9px;margin-right:9px}.choice.correct{border-color:#2da66b;background:#e8fff1}.choice.wrong{border-color:#d95151;background:#fff0f0}.choice:disabled{cursor:default;transform:none}
+.feedback{margin-top:14px;padding:14px;border-radius:12px;line-height:1.5;font-weight:650}.feedback.good{background:#e6f9ed;color:#155f37}.feedback.bad{background:#fff0e8;color:#873f1a}.small{font-size:.92rem;color:#627188}.scorebig{font-size:clamp(2rem,8vw,4rem);font-weight:900;color:var(--navy);margin:4px}.center{text-align:center}.star{font-size:2rem;display:inline-block;animation:bounce .8s ease-in-out infinite alternate}@keyframes bounce{to{transform:translateY(-7px) rotate(5deg)}}.cert-preview{border:5px double #d2a62c;padding:22px;background:#fffdf4;text-align:center;border-radius:8px}.cert-preview h2{color:#173b68;font-family:Georgia,serif}.cert-preview .student{font-size:1.5rem;font-weight:900;color:#9a7011;border-bottom:1px solid #d2a62c;display:inline-block;padding:5px 20px}
+footer{text-align:center;color:#627188;font-size:.84rem;padding:10px}
+@media(min-width:650px){.choices{grid-template-columns:1fr 1fr}.hero-inner{max-width:700px;margin:auto}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head>
+<body>
+<header><h1>🇮🇩 Petualangan Pancasila ⭐</h1><p>Gim Edukasi Pendidikan Pancasila • Kelas 3 SD</p></header>
+<main class="wrap">
+<section id="start" class="panel hero">
+<div class="mascot" aria-hidden="true">🦅📚</div><span class="pill">5 Level • 15 Tantangan</span>
+<h2>Jadilah Pahlawan Pancasila!</h2>
+<p>Jelajahi lima sila Pancasila, pilih tindakan yang tepat dalam kehidupan sehari-hari, kumpulkan poin, dan raih sertifikat digitalmu. Ingat, setiap kesalahan adalah kesempatan untuk belajar!</p>
+<div style="max-width:520px;margin:20px auto;text-align:left">
+<label for="studentName">Nama lengkap siswa</label><input id="studentName" maxlength="70" placeholder="Contoh: Budi Santoso" autocomplete="name">
+<label for="studentClass">Kelas</label><input id="studentClass" maxlength="30" value="3 SD" placeholder="Contoh: 3A">
+</div><button id="startBtn" class="primary" style="min-width:200px">🚀 Mulai Petualangan</button>
+<p class="small">Petunjuk: baca soal dengan teliti. Setiap jawaban benar bernilai 10 poin.</p>
+</section>
+<section id="game" class="panel hidden">
+<div class="topline"><span id="levelName" class="pill">Level 1</span><strong>⭐ Skor: <span id="score">0</span>/150</strong></div>
+<div class="progress" aria-label="Kemajuan permainan"><div id="bar" class="bar"></div></div>
+<div id="levelChips" class="levels"></div>
+<p class="small" id="counter">Soal 1 dari 15</p>
+<div id="symbol" class="mascot" style="font-size:3rem;text-align:center">⭐</div>
+<div id="question" class="question"></div><div id="scenario" class="scenario"></div>
+<div id="choices" class="choices"></div><div id="feedback" class="feedback hidden" role="status" aria-live="polite"></div>
+<div class="btnrow"><button id="nextBtn" class="primary hidden">Soal Berikutnya ➜</button></div>
+</section>
+<section id="finish" class="panel hidden center">
+<div class="star">🏆</div><h2>Petualangan Selesai!</h2><p id="finishMessage">Hebat! Kamu telah menyelesaikan semua level.</p>
+<div class="scorebig" id="finalScore">0/150</div><p id="scoreNote"></p>
+<div class="cert-preview" id="certificate">
+<div style="font-size:2.2rem">🇮🇩 ⭐ 🏅 ⭐ 🇮🇩</div><p style="letter-spacing:3px;font-weight:800;color:#9a7011">SERTIFIKAT PENGHARGAAN</p>
+<h2>PAHLAWAN PANCASILA</h2><p>Diberikan kepada</p><div class="student" id="certName">Nama Siswa</div>
+<p>Atas keberhasilan menyelesaikan gim edukasi<br><b>Petualangan Pancasila — Kelas 3 SD</b></p>
+<p>Kelas: <b id="certClass">3 SD</b></p><p>Skor akhir: <b id="certScore">0/150</b></p>
+<p>Tanggal penyelesaian: <b id="certDate">-</b></p><p style="color:#9a7011;font-weight:800">Terus amalkan nilai-nilai Pancasila! 🌟</p>
+</div>
+<div class="btnrow"><button id="downloadBtn" class="gold">⬇️ Unduh Sertifikat (PNG)</button><button id="printBtn" class="secondary">🖨️ Cetak / Simpan PDF</button><button id="retryBtn" class="primary">🔄 Main Lagi</button></div>
+<p class="small">Sertifikat dibuat langsung di perangkat ini. Tidak perlu akun.</p>
+</section>
+<footer>Belajar dengan gembira, berbuat baik setiap hari! 💙</footer>
+</main>
+<script>
+const levels=[
+{title:"Sila 1 • Ketuhanan Yang Maha Esa",icon:"🙏",qs:[
+{q:"Sebelum mulai belajar, sikap yang sesuai dengan sila pertama adalah ...",s:"Di kelas, Bu Guru mengajak semua siswa berdoa menurut agama dan kepercayaannya.",a:["Mengganggu teman yang sedang berdoa","Berdoa dengan khusyuk sesuai agama masing-masing","Memaksa teman mengikuti agama kita","Menertawakan cara ibadah teman"],c:1,e:"Kita berdoa menurut agama dan kepercayaan masing-masing serta menghormati orang lain."},
+{q:"Temanmu sedang menjalankan ibadah. Apa yang sebaiknya kamu lakukan?",s:"Kamu ingin bermain, tetapi temanmu sedang beribadah.",a:["Menghormati dan tidak mengganggunya","Mengajaknya bermain dengan paksa","Membuat suara gaduh","Mengejeknya"],c:0,e:"Menghormati teman yang beribadah menunjukkan sikap toleransi."},
+{q:"Perilaku yang menunjukkan rasa syukur kepada Tuhan adalah ...",s:"Kamu mendapat kesehatan dan bisa belajar bersama teman.",a:["Sombong kepada teman","Merusak tanaman sekolah","Bersyukur dan menggunakan kesempatan untuk berbuat baik","Mengeluh sepanjang hari"],c:2,e:"Bersyukur dapat ditunjukkan melalui doa dan perbuatan baik."}]},
+{title:"Sila 2 • Kemanusiaan yang Adil dan Beradab",icon:"🤝",qs:[
+{q:"Ada teman yang terjatuh di halaman sekolah. Apa tindakan terbaik?",s:"Kamu melihat temanmu jatuh saat berlari.",a:["Menertawakannya","Membiarkannya walaupun terluka","Membantu dan memanggil guru jika perlu","Merekamnya untuk bahan ejekan"],c:2,e:"Menolong orang yang membutuhkan adalah contoh sikap kemanusiaan."},
+{q:"Seorang siswa baru belum memiliki teman. Apa yang dapat kamu lakukan?",s:"Ia duduk sendiri saat istirahat.",a:["Mengajaknya berkenalan dan bermain bersama","Mengabaikannya","Menyuruhnya pergi","Mengejek karena belum punya teman"],c:0,e:"Bersikap ramah dan tidak membeda-bedakan teman sesuai sila kedua."},
+{q:"Mengapa kita tidak boleh mengejek teman yang berbeda kemampuan?",s:"Setiap anak memiliki kelebihan dan kebutuhan yang berbeda.",a:["Agar dianggap paling hebat","Karena setiap orang harus dihormati dan diperlakukan dengan baik","Supaya teman takut","Karena hanya teman dekat yang perlu dihormati"],c:1,e:"Semua manusia memiliki martabat dan harus diperlakukan secara adil dan beradab."}]},
+{title:"Sila 3 • Persatuan Indonesia",icon:"🇮🇩",qs:[
+{q:"Saat kerja kelompok, anggota kelompok berasal dari daerah berbeda. Sikap terbaik adalah ...",s:"Ada teman yang berbicara dengan logat daerah yang berbeda.",a:["Menolak bekerja dengannya","Hanya memilih teman sedaerah","Menertawakan logatnya","Bekerja sama dan saling menghargai"],c:3,e:"Perbedaan daerah dan budaya tidak menghalangi kita untuk bersatu."},
+{q:"Kelas akan membersihkan halaman bersama. Agar pekerjaan selesai, siswa sebaiknya ...",s:"Setiap siswa mendapat tugas yang berbeda.",a:["Menunggu teman bekerja","Bekerja sama menjalankan tugas masing-masing","Pulang lebih awal tanpa izin","Memilih tugas yang mudah saja lalu berhenti"],c:1,e:"Gotong royong dan kerja sama memperkuat persatuan."},
+{q:"Kamu dan temanmu berbeda pendapat tentang permainan saat istirahat. Apa yang sebaiknya dilakukan?",s:"Kalian sama-sama ingin pendapatnya dipilih.",a:["Bertengkar sampai ada yang menang","Tidak mau berteman lagi","Berdiskusi dan mencari pilihan yang disepakati bersama","Memaksa semua teman mengikuti pilihanmu"],c:2,e:"Menghargai perbedaan dan mencari kesepakatan membantu menjaga kerukunan."}]},
+{title:"Sila 4 • Kerakyatan yang Dipimpin oleh Hikmat Kebijaksanaan dalam Permusyawaratan/Perwakilan",icon:"🗣️",qs:[
+{q:"Kelas akan memilih ketua kelompok. Cara yang sesuai sila keempat adalah ...",s:"Semua anggota diberi kesempatan menyampaikan pendapat.",a:["Bermusyawarah atau memilih secara adil","Ketua menunjuk sahabatnya tanpa diskusi","Memaksa teman memilih kita","Tidak mengizinkan teman berbicara"],c:0,e:"Musyawarah memberi kesempatan kepada anggota untuk menyampaikan pendapat."},
+{q:"Saat musyawarah, pendapatmu tidak dipilih. Apa yang sebaiknya kamu lakukan?",s:"Kelompok memilih usul teman yang lain setelah berdiskusi.",a:["Marah dan meninggalkan kelompok","Mengganggu keputusan kelompok","Memaksa mengulang sampai pendapatmu menang","Menerima keputusan bersama dengan lapang dada"],c:3,e:"Kita perlu menghargai hasil musyawarah yang dilakukan dengan baik."},
+{q:"Ketika teman menyampaikan pendapat, sikap yang benar adalah ...",s:"Kamu memiliki pendapat berbeda.",a:["Memotong pembicaraannya","Mendengarkan dengan sopan lalu menanggapi bergantian","Menertawakan pendapatnya","Berbicara lebih keras agar menang"],c:1,e:"Mendengarkan pendapat orang lain adalah bagian penting dari musyawarah."}]},
+{title:"Sila 5 • Keadilan Sosial bagi Seluruh Rakyat Indonesia",icon:"⚖️",qs:[
+{q:"Guru membagikan alat gambar untuk digunakan bersama. Sikap adil adalah ...",s:"Jumlah alat terbatas sehingga harus dipakai bergantian.",a:["Menyimpan semua alat untuk diri sendiri","Memberikan hanya kepada sahabat","Membagi kesempatan menggunakan alat secara adil","Merebut alat dari teman"],c:2,e:"Bersikap adil berarti memberikan hak dan kesempatan secara layak."},
+{q:"Saat piket kelas, kamu melihat teman bekerja sendirian. Apa yang sebaiknya dilakukan?",s:"Kelas harus bersih sebelum pelajaran dimulai.",a:["Membantu sesuai tugas agar pekerjaan lebih ringan","Berpura-pura tidak melihat","Menyuruhnya mengerjakan semuanya","Mengotori kelas lagi"],c:0,e:"Berbagi tugas dan melaksanakan kewajiban adalah bentuk tanggung jawab."},
+{q:"Dua teman sama-sama ingin meminjam satu buku kelas. Apa solusi yang adil?",s:"Buku itu hanya tersedia satu buah.",a:["Memberikannya kepada teman paling kaya","Menyembunyikan buku","Membiarkan mereka berebut","Membuat jadwal bergantian agar keduanya mendapat kesempatan"],c:3,e:"Kesempatan yang adil dapat diatur dengan bergiliran dan kesepakatan."}]}
+];
+let questions=[],index=0,score=0,answered=false,student="",studentClass="",wrongCount=0;
+const $=id=>document.getElementById(id);
+function allQuestions(){return levels.flatMap((l,li)=>l.qs.map((q,qi)=>({...q,li,qi})));}
+function start(){student=$("studentName").value.trim();studentClass=$("studentClass").value.trim()||"3 SD";if(!student){$("studentName").focus();$("studentName").style.borderColor="#c64242";return} $("studentName").style.borderColor="#c9d9ec";questions=allQuestions();index=0;score=0;wrongCount=0;$("start").classList.add("hidden");$("finish").classList.add("hidden");$("game").classList.remove("hidden");render();}
+function render(){answered=false;const q=questions[index],l=levels[q.li];$("levelName").textContent=`Level ${q.li+1} dari 5`; $("score").textContent=score;$("counter").textContent=`Soal ${index+1} dari ${questions.length}`;$("symbol").textContent=l.icon;$("question").textContent=q.q;$("scenario").textContent=q.s;$("feedback").className="feedback hidden";$("nextBtn").classList.add("hidden");$("bar").style.width=(index/questions.length*100)+"%";
+$("levelChips").innerHTML=levels.map((x,i)=>`<span class="level ${i===q.li?'active':i<q.li?'done':''}">${i<q.li?'✓ ':''}${i+1}. Sila ${i+1}</span>`).join("");
+$("choices").innerHTML="";q.a.forEach((a,i)=>{const b=document.createElement("button");b.className="choice";b.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span>${a}`;b.addEventListener("click",()=>choose(i));$("choices").appendChild(b);});}
+function choose(n){if(answered)return;answered=true;const q=questions[index],buttons=[...$("choices").children],ok=n===q.c;buttons.forEach((b,i)=>{b.disabled=true;if(i===q.c)b.classList.add("correct");if(i===n&&!ok)b.classList.add("wrong")});if(ok){score+=10;beep(true)}else{wrongCount++;beep(false)}$("score").textContent=score;$("bar").style.width=((index+1)/questions.length*100)+"%";$("feedback").className="feedback "+(ok?"good":"bad");$("feedback").textContent=(ok?"✅ Hebat! Jawabanmu benar. +10 poin. ":"💡 Belum tepat, tidak apa-apa! ")+q.e;$("nextBtn").textContent=index===questions.length-1?"Lihat Hasil 🏆":"Soal Berikutnya ➜";$("nextBtn").classList.remove("hidden");}
+function beep(good){try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const c=new C(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=good?660:260;g.gain.value=.06;o.start();o.stop(c.currentTime+.13);o.onended=()=>c.close()}catch(e){}}
+function finish(){ $("game").classList.add("hidden");$("finish").classList.remove("hidden");$("bar").style.width="100%";$("finalScore").textContent=score+"/150";$("scoreNote").textContent=`Jawaban benar: ${score/10} dari 15 soal. ${wrongCount===0?"Sempurna! Semua jawaban benar!":"Terus berlatih, ya. Kamu bisa mencoba lagi untuk meningkatkan skor."}`;$("finishMessage").textContent=score>=120?"Luar biasa! Kamu adalah Pahlawan Pancasila teladan!":score>=80?"Bagus sekali! Terus amalkan nilai-nilai Pancasila!":"Terima kasih sudah berusaha! Belajar lagi dan coba tantangannya sekali lagi, ya!";$("certName").textContent=student;$("certClass").textContent=studentClass;$("certScore").textContent=score+"/150";$("certDate").textContent=new Intl.DateTimeFormat("id-ID",{day:"numeric",month:"long",year:"numeric"}).format(new Date());}
+$("startBtn").addEventListener("click",start);$("nextBtn").addEventListener("click",()=>{if(index<questions.length-1){index++;render()}else finish()});$("retryBtn").addEventListener("click",()=>{$("finish").classList.add("hidden");$("start").classList.remove("hidden");$("studentName").value=student;$("studentClass").value=studentClass});$("printBtn").addEventListener("click",()=>window.print());
+$("downloadBtn").addEventListener("click",()=>{const canvas=document.createElement("canvas");canvas.width=1600;canvas.height=1100;const c=canvas.getContext("2d");c.fillStyle="#fffaf0";c.fillRect(0,0,1600,1100);c.strokeStyle="#c89a25";c.lineWidth=16;c.strokeRect(35,35,1530,1030);c.strokeStyle="#173b68";c.lineWidth=4;c.strokeRect(60,60,1480,990);c.textAlign="center";c.fillStyle="#173b68";c.font="bold 58px Georgia";c.fillText("SERTIFIKAT PENGHARGAAN",800,190);c.fillStyle="#b18518";c.font="bold 78px Georgia";c.fillText("PAHLAWAN PANCASILA",800,300);c.fillStyle="#27364b";c.font="32px Arial";c.fillText("Diberikan dengan bangga kepada",800,400);c.fillStyle="#9a7011";c.font="bold 64px Georgia";let name=student;while(c.measureText(name).width>1300){c.font="bold 48px Georgia";}c.fillText(name,800,510);c.strokeStyle="#c89a25";c.lineWidth=2;c.beginPath();c.moveTo(250,540);c.lineTo(1350,540);c.stroke();c.fillStyle="#27364b";c.font="30px Arial";c.fillText("Atas keberhasilan menyelesaikan gim edukasi",800,620);c.font="bold 36px Arial";c.fillText("Petualangan Pancasila — Kelas 3 SD",800,680);c.font="30px Arial";c.fillText("Kelas: "+studentClass,800,760);c.fillText("Skor akhir: "+score+"/150",800,820);c.fillText("Tanggal penyelesaian: "+$("certDate").textContent,800,880);c.fillStyle="#9a7011";c.font="bold 28px Arial";c.fillText("Terus amalkan nilai-nilai Pancasila!",800,965);c.font="48px Arial";c.fillText("⭐  🇮🇩  🏅  🇮🇩  ⭐",800,140);const a=document.createElement("a");a.download="Sertifikat-Pahlawan-Pancasila.png";a.href=canvas.toDataURL("image/png");a.click();});
+window.addEventListener("keydown",e=>{if(!$("game").classList.contains("hidden")&&!answered&&["1","2","3","4"].includes(e.key))choose(Number(e.key)-1)});
+</script>
+<style>@media print{body{background:white}.wrap{max-width:none;margin:0}.wrap>section{display:none!important}#finish{display:block!important;border:0;box-shadow:none;padding:0}#finish>*:not(#certificate){display:none!important}#certificate{display:block!important;padding:40px;margin:20px;border:8px double #c89a25}.cert-preview h2{font-size:30px}header,footer{display:none}}</style>
+</body></html>
